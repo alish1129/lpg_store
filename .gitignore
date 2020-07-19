@@ -3,3 +3,7 @@
 .env
 backend/node_modules
 frontend/node_modules
+.idea/workspace.xml
+*.xml
+.idea/lpg_store.iml
+.idea/workspace.xml

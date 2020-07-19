@@ -1,10 +1,14 @@
 import React,{useState} from "react";
-import Layout from "../core/Layout";
-import {API} from "../config";
 import Menu from "../core/Menu";
-import './SignUp.css'
+import {useHistory} from "react-router-dom";
+import {signupData} from "../auth";
+
+import './SignUp.css';
+import './SignUp.scss';
 
 const SignUp = () => {
+
+    const history = useHistory();
 
     const [values, setValues] = useState({
         name: '',
@@ -14,100 +18,85 @@ const SignUp = () => {
         success: false
     });
 
-    const {name, email, password} = values;
+    const {name, email, password, success, error} = values;
 
     const handleChange = name => event => {
         setValues({...values, error: false, [name]: event.target.value });
     }
 
-    const signupData = user => {
-        //console.log(name, email, password);
-        fetch(`${API}/signup`, {
-            method: "POST",
-            headers: {
-                Accept: "application/json",
-                "Content-type": "application/json"
-            },
-            body: JSON.stringify(user)
-        }).then(response => {
-            return response.json();
-        }).catch(err => {
-            console.log(err);
-        })
-    }
-
     const submitForm = (event) => {
         event.preventDefault();
-        signupData({name, email, password});
+        return signupData({name, email, password})
+            .then(data => {
+                if(data.error)
+                {
+                    setValues({...values, error: data.error,success: false});
+                }
+                else
+                {
+                    setValues({...values, name: '', email: '', password: '',error: '', success: true});
+                    history.push('/signin');
+                }
+            })
     }
 
+    const showError = () => (
+        <div className="alert alert-danger" style={{display: error ? '' : 'none', width: '100%', textAlign: 'center'}}>{error}</div>
+    )
+
+    const showSuccess = () => (
+        <div className="alert alert-success" style={{display: success ? '' : 'none'}}>New account is created</div>
+    )
+
     const signUpForm = () => (
-        <div className="col-md-8 offset-md-2">
-            <div className="container">
-                <div className="col-md-6 mx-auto text-center">
-                    <div className="header-title">
-                        <h2 className="wv-heading--title">
-                            Check it out — it’s free!
-                        </h2>
+        <div className="sign_in">
+                <div className="promo">
+                    <h1 className="title">Save your spot in line.</h1>
+                    <div className="subtitle">Start off today and get ahead of the crowd! <br/>Getting started is only a few click
+                        away.</div>
+                    <div className="buttons">
+                        <button className="btn btn_outline1">learn more</button>
+                        <button className="btn btn_outline">About Us</button>
                     </div>
-                </div>
-                <div className="card">
-                    <div className="row">
-                        <div className="col-md-4 mx-auto">
-                            <div className="form">
-                                <form>
-                                    <div className="form-group">
-                                        <input type="text" name="name" onChange={handleChange('name')} className="form-control my-input" id="name"
-                                               placeholder="Name"/>
-                                    </div>
-                                    <div className="form-group">
-                                        <input type="email" name="email" onChange={handleChange('email')} className="form-control my-input" id="email"
-                                               placeholder="Email"/>
-                                    </div>
-                                    <div className="form-group">
-                                        <input type="password" min="0" name="password" onChange={handleChange('password')} id="password" className="form-control my-input"
-                                               placeholder="Password"/>
-                                    </div>
-                                    <div className="form-group">
-                                        <input type="password" min="0" name="confirmPassword" id="confirmPassword"
-                                               className="form-control my-input"
-                                               placeholder="Confirm Password"/>
-                                    </div>
-                                    <div className="text-center ">
-                                        <button type="submit" onClick={submitForm} className="btn btn-block send-button tx-tfm">Submit</button>
-                                    </div>
-                                    <div className="col-md-12 ">
-                                        <div className="login-or">
-                                            <hr className="hr-or"/>
-                                            <span className="span-or">or</span>
-                                        </div>
-                                    </div>
-                                    <div className="form-group">
-                                        <a className="btn btn-block g-button" href="#">
-                                            <i className="fa fa-google"></i> Sign up with Google
-                                        </a>
-                                    </div>
-                                    <p className="small mt-3">By signing up, you are indicating that you have read and
-                                        agree to
-                                        the <a href="#" className="ps-hero__content__link">Terms of Use</a> and <a
-                                            href="#">Privacy
-                                            Policy</a>.
-                                    </p>
-                                </form>
+                    <div className="form_container rounded">
+                        <div className="form">
+                            <h2 className="heading">Let's get you started!</h2>
+                            <div className="description">Getting started is quick and simple, just fill out the info
+                                below!
                             </div>
+                            <form>
+                                <input className="input" type="text" name="name" value={name} onChange={handleChange('name')} placeholder="Name"/>
+                                <input className="input" type="email" name="email" value={email} onChange={handleChange('email')} placeholder="Email Address"/>
+                                <input className="input" type="password" name="password" value={password} onChange={handleChange('password')} placeholder="Password"/>
+                                <label>
+                                    <input className="input" type="checkbox"/>I agree to
+                                    <a href="#"> Terms & Conditions</a>
+                                </label>
+
+                            </form>
+
                         </div>
+                        {showSuccess()}
+                        {showError()}
+                        <div className="row">
+                            <div className="col-md-3"></div>
+                            <div className="col-md-6">
+                                <button type="submit" onClick={submitForm} className="btn btn_accent">Register</button>
+                            </div>
+                            <div className="col-md-3"></div>
+                        </div>
+                        <div className="copyright">&copy; 2020 All Rights Reserved.</div>
                     </div>
                 </div>
             </div>
-        </div>
     )
 
     return (
         <div>
             <Menu/>
-            {JSON.stringify(values)}
-            {signUpForm()}
-
+            <div>
+                {signUpForm()}
+            </div>
         </div>
     )
 };
