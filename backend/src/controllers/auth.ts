@@ -5,6 +5,8 @@ import expressJWT from 'express-jwt'; // Authorization Check
 import UserModel from '../models/user';
 import errorHandler from '../helpers/dbErrorHandler';
 
+require('dotenv').config();
+
 export const signup = (req: Request, res: Response, next: NextFunction) => {
 	const user = new UserModel(req.body);
 
@@ -24,10 +26,6 @@ export const signup = (req: Request, res: Response, next: NextFunction) => {
 export const signin = (req: Request, res: Response, next: NextFunction) => {
 	const { email, password } = req.body;
 
-	console.log(req.body);
-
-	console.log(email);
-
 	UserModel.findOne({ email }, (err: any, user: any) => {
 		if (err || !user) {
 			return res.status(400).json({
@@ -41,7 +39,8 @@ export const signin = (req: Request, res: Response, next: NextFunction) => {
 			});
 		}
 		//generate a signed token with userId and secret
-		const token = jwt.sign({ _id: user._id }, process.env.JWT_SECRET + '');
+		//@ts-ignore
+		const token = jwt.sign({ _id: user._id, role: user.role }, process.env.JWT_SECRET);
 
 		//persist the token as 't' in cookie with expiry date
 
@@ -71,7 +70,8 @@ export const signout = (req: Request, res: Response) => {
 };
 
 export const requireSignIn = expressJWT({
-	secret: process.env.JWT_SECRET + '',
+	//@ts-ignore
+	secret: process.env.JWT_SECRET,
 	userProperty: 'auth'
 });
 
@@ -85,10 +85,10 @@ export const isAuth = (req: any, res: Response, next: NextFunction) => {
 	next();
 };
 
-export const isAdmin = (req: any, res: any, user: any, next: NextFunction) => {
-	if (user.role != 1) {
+export const isAdmin = (req: any, res: any, next: NextFunction) => {
+	if (req.auth.role !== 1) {
 		return res.status(403).json({
-			error: 'Access Denied. User is not an admin.'
+			error: 'Admin resourse! Access denied'
 		});
 	}
 	next();

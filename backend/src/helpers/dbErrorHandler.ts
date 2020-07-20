@@ -1,10 +1,17 @@
+'use strict';
+
 /**
  * Get unique error field name
  */
 const uniqueMessage = (error: any) => {
 	let output;
+	console.log(error.message);
+
 	try {
-		let fieldName = error.message.substring(error.message.lastIndexOf('.$') + 2, error.message.lastIndexOf('_1'));
+		let fieldName = error.message.substring(
+			error.message.lastIndexOf('index: ') + 7,
+			error.message.lastIndexOf('_1')
+		);
 		output = fieldName.charAt(0).toUpperCase() + fieldName.slice(1) + ' already exists';
 	} catch (ex) {
 		output = 'Unique field already exists';

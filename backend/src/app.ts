@@ -4,25 +4,27 @@ import bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
 import expressValidator from 'express-validator';
 import * as dotenv from 'dotenv';
-import cors = require('cors');
+import cors from 'cors';
 
 import connectDB from './database';
 import { authRouter } from './routes/auth';
 import { inventoriesRouter } from './routes/inventories';
+import { categoryRouter } from './routes/category';
+import { userRouter } from './routes/user';
+import { productRouter } from './routes/product';
 
 dotenv.config();
 
 const app: Application = express();
 
-const options:cors.CorsOptions = {
-	allowedHeaders: ["Origin", "X-Requested-With", "Content-Type", "Accept", "X-Access-Token"],
+const options: cors.CorsOptions = {
+	allowedHeaders: [ 'Origin', 'X-Requested-With', 'Content-Type', 'Accept', 'X-Access-Token' ],
 	credentials: true,
-	methods: "GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE"
+	methods: 'GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE'
 };
 
 connectDB();
 //Define Routes
-
 
 //Middlewares
 app.use(morgan('dev'));
@@ -32,7 +34,6 @@ app.use(expressValidator());
 
 app.use(cors(options));
 
-
 app.get('/', (req, res) => {
 	res.send('Hello');
 });
@@ -40,6 +41,9 @@ app.get('/', (req, res) => {
 //Routes Middleware
 app.use('/api', authRouter);
 app.use('/api', inventoriesRouter);
+app.use('/api', categoryRouter);
+app.use('/api', userRouter);
+app.use('/api', productRouter);
 
 const PORT = process.env.PORT || 5000;
 
