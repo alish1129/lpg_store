@@ -4,6 +4,7 @@ import bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
 import expressValidator from 'express-validator';
 import * as dotenv from 'dotenv';
+import cors = require('cors');
 
 import connectDB from './database';
 import { authRouter } from './routes/auth';
@@ -16,6 +17,12 @@ dotenv.config();
 
 const app: Application = express();
 
+const options: cors.CorsOptions = {
+	allowedHeaders: [ 'Origin', 'X-Requested-With', 'Content-Type', 'Accept', 'X-Access-Token' ],
+	credentials: true,
+	methods: 'GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE'
+};
+
 connectDB();
 //Define Routes
 
@@ -25,7 +32,9 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(expressValidator());
 
-app.get('/api', (req, res) => {
+app.use(cors(options));
+
+app.get('/', (req, res) => {
 	res.send('Hello');
 });
 
