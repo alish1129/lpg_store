@@ -7,3 +7,4 @@ frontend/node_modules
 *.xml
 .idea/lpg_store.iml
 .idea/workspace.xml
+node_modules/
