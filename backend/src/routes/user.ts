@@ -1,10 +1,12 @@
 import { Router } from 'express';
-import { requireSignIn, isAdmin } from '../controllers/auth';
+import { requireSignIn, isAuth, isAdmin } from '../controllers/auth';
 import { userById } from '../controllers/user';
 
 const userRouter = Router();
 
-userRouter.get('/secret/:userId', requireSignIn, isAdmin, (req: any, res: any) => {
+userRouter.get('/secret/:userId', requireSignIn, isAuth, isAdmin, (req: any, res: any) => {
+	console.log(req);
+
 	res.json({
 		user: req.profile
 	});
@@ -12,4 +14,4 @@ userRouter.get('/secret/:userId', requireSignIn, isAdmin, (req: any, res: any) =
 
 userRouter.param('userId', userById);
 
-export default userRouter;
+export { userRouter };

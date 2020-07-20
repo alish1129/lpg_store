@@ -36,5 +36,4 @@ const errorHandler = (error: any) => {
 
 	return message;
 };
-
 export default errorHandler;
