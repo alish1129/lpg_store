@@ -31,7 +31,7 @@ export const signin = (req: Request, res: Response, next: NextFunction) => {
 	UserModel.findOne({ email }, (err: any, user: any) => {
 		if (err || !user) {
 			return res.status(400).json({
-				err: 'User with the email does not exist. Please signup'
+				error: 'User with the email does not exist. Please signup'
 			});
 		}
 

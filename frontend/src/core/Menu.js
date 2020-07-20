@@ -5,7 +5,7 @@ import './css/menu.scss'
 const isActive = (history,path) => {
     if(history.location.pathname === path)
     {
-        return {color : "#ff9900"};
+        return {color : "#7d3cd3"};
     }
     else
     {

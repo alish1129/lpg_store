@@ -3,8 +3,7 @@ import Menu from "../core/Menu";
 import {useHistory} from "react-router-dom";
 import {signupData} from "../auth";
 
-import './SignUp.css';
-import './SignUp.scss';
+import './SignUp&SignIn.scss';
 
 const SignUp = () => {
 
@@ -26,7 +25,8 @@ const SignUp = () => {
 
     const submitForm = (event) => {
         event.preventDefault();
-        return signupData({name, email, password})
+        setValues({...values,error: false});
+        signupData({name, email, password})
             .then(data => {
                 if(data.error)
                 {
@@ -49,7 +49,7 @@ const SignUp = () => {
     )
 
     const signUpForm = () => (
-        <div className="sign_in">
+        <div className="sign_in register">
                 <div className="promo">
                     <h1 className="title">Save your spot in line.</h1>
                     <div className="subtitle">Start off today and get ahead of the crowd! <br/>Getting started is only a few click
@@ -58,7 +58,7 @@ const SignUp = () => {
                         <button className="btn btn_outline1">learn more</button>
                         <button className="btn btn_outline">About Us</button>
                     </div>
-                    <div className="form_container rounded">
+                    <div className={`form_container rounded ${error ? 'form_shake' : ''} `}>
                         <div className="form">
                             <h2 className="heading">Let's get you started!</h2>
                             <div className="description">Getting started is quick and simple, just fill out the info
@@ -78,12 +78,12 @@ const SignUp = () => {
                         </div>
                         {showSuccess()}
                         {showError()}
-                        <div className="row">
-                            <div className="col-md-3"></div>
-                            <div className="col-md-6">
+                        <div className="row" style={{margin: '0'}}>
+                            <div className="col-sm-3"></div>
+                            <div className="col-sm-6">
                                 <button type="submit" onClick={submitForm} className="btn btn_accent">Register</button>
                             </div>
-                            <div className="col-md-3"></div>
+                            <div className="col-sm-3"></div>
                         </div>
                         <div className="copyright">&copy; 2020 All Rights Reserved.</div>
                     </div>
