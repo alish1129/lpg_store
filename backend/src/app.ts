@@ -4,7 +4,7 @@ import bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
 import expressValidator from 'express-validator';
 import * as dotenv from 'dotenv';
-import cors = require('cors');
+import cors from 'cors';
 
 import connectDB from './database';
 import { authRouter } from './routes/auth';
