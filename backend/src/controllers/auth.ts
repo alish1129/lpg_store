@@ -13,7 +13,7 @@ export const signup = (req: Request, res: Response, next: NextFunction) => {
 	user.save((error: any, user: any) => {
 		if (error) {
 			return res.status(400).json({
-				err: errorHandler(error)
+				error: errorHandler(error)
 			});
 		}
 		user.salt = undefined;
