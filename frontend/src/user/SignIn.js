@@ -105,6 +105,7 @@ const SignIn = () => {
             <Menu/>
             <div>
                 {signInForm()}
+
                 {redirectUser()}
             </div>
         </div>

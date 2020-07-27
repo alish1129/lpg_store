@@ -1,7 +1,8 @@
 import React from "react";
 /* wrap the application routes and make the props available for other nested components*/
-import {BrowserRouter} from "react-router-dom";
-import {Switch, Route} from "react-router-dom";
+import {BrowserRouter, Switch, Route} from "react-router-dom";
+import PrivateRoute from "./auth/privateRoute";
+import UserDashboard from "./user/UserDashboard";
 
 import SignUp from "./user/SignUp";
 import SignIn from "./user/SignIn";
@@ -14,6 +15,7 @@ const Routes = () => {
                 <Route path="/" exact component={Home}/>
                 <Route path="/signin" exact component={SignIn}/>
                 <Route path="/signup" exact component={SignUp}/>
+                <PrivateRoute component={UserDashboard} path='/UserDashboard' exact />
             </Switch>
         </BrowserRouter>
     )

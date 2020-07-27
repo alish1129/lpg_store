@@ -41,7 +41,7 @@ const SignUp = () => {
     }
 
     const showError = () => (
-        <div className="alert alert-danger" style={{display: error ? '' : 'none', width: '100%', textAlign: 'center'}}>{error}</div>
+        <div className="alert alert-danger blinking" style={{display: error ? '' : 'none', width: '100%', textAlign: 'center', backgroundColor: 'white', borderColor: 'white'}}>**{error}</div>
     )
 
     const showSuccess = () => (

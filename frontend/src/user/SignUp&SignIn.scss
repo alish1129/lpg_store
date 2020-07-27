@@ -13,13 +13,12 @@ html {
 }
 .sign_in{
   position: fixed;
-  top: 5.5%;
+  top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  z-index: -1;
   //background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/d1/Mount_Everest_as_seen_from_Drukair2_PLW_edit.jpg);
-
-
   background-size: cover;
   background-position: center;
   .promo {
@@ -63,8 +62,8 @@ html {
     }
   }
   .form_container {
-    height: 90%;
-    top: 5%;
+    height: 80%;
+    top: 10%;
     right: 5%;
     -webkit-box-shadow: 1px 1px 55px 4px rgba(0,0,0,0.75);
     -moz-box-shadow: 1px 1px 55px 4px rgba(0,0,0,0.75);
@@ -210,4 +209,15 @@ input[type="checkbox"] {
   40%, 60% {
     transform: translate3d(6px, 0, 0);
   }
+}
+
+.blinking{
+  animation:blinkingText 1.8s 10;
+}
+@keyframes blinkingText{
+  0%{		color: red;	}
+  49%{	color: orange;	}
+  50%{	color: red;	}
+  99%{	color: orange;	}
+  100%{	color: red;	}
 }
