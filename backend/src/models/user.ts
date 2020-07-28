@@ -33,8 +33,8 @@ const userSchema = new Schema(
 			required: true
 		},
 		location: {
-			type: String,
-			default: ''
+			type: Array,
+			default: []
 		},
 		shippingAddresses: {
 			type: Array,
@@ -73,8 +73,6 @@ userSchema
 	.get(function(this: any) {
 		return this._password;
 	});
-
-userSchema.index({ location: '2dsphere' });
 
 userSchema.methods = {
 	authenticate: function(this, plainText: String) {
