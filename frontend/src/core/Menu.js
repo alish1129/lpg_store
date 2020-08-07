@@ -16,7 +16,18 @@ const isActive = (history,path) => {
 };
 
 const returnStyleForTitle = (history,path) => {
-    if(history.location.pathname !== path)
+    if(history.location.pathname === '/UserDashBoard')
+    {
+        return {
+            color: 'rgb(180,35,41)',
+            height: '42px',
+            fontWeight: 'bold',
+            transition: 'box-shadow .3s',
+            boxShadow: '0 0 11px rgba(33,33,33,.2)',
+            backgroundColor:'white'
+        };
+    }
+    else if(history.location.pathname !== path)
     {
         return {
             color: 'rgb(180,35,41)', border: '1px solid #fff', height: '42px', fontWeight: 'bold',
@@ -44,25 +55,13 @@ const test = () => {
 }
 
 const Menu = ({history}) => (
-    <div>
+    <div className="navbarMenu">
         <ul className="nav nav-pills fixed-top">
             <li className={`nav-item ${isAuthenticated()? '' : 'mr-auto'}`}>
                 <Link className="nav-link" style={returnStyleForTitle(history,'/')} to="/">
-                    {/*<img src="https://cdn0.iconfinder.com/data/icons/science-and-technology-11/128/gas_power_cylinder_lpg-512.png" width="30"
-                         className="" alt=""/> SURYA SOLUTION*/}
-                    {/*<img style={{marginTop: '-5px'}} src="https://5.imimg.com/data5/UI/YO/OU/SELLER-93416289/domestic-lpg-cylinder-500x500.jpg" width="30"
-                         className="" alt=""/> SURYA SOLUTION*/}
                     <img style={{margin: '-5px 0px 0px -5px'}} src={logo} width="30"
                          className="" alt=""/> SURYA SOLUTION
                 </Link>
-            </li>
-            {isAuthenticated() &&
-                <li className="nav-item mr-auto">
-                    <Link className="nav-link" style={isActive(history,'/UserDashBoard')} to="/UserDashBoard">DASHBOARD</Link>
-                </li>
-            }
-            <li className="nav-item">
-                <Link className="nav-link" style={isActive(history,'/')} to="/">HOME</Link>
             </li>
 
             {!isAuthenticated() && (
@@ -75,12 +74,22 @@ const Menu = ({history}) => (
                     </li>
                 </Fragment>
             )}
-
             {isAuthenticated() && (
-                <li className="nav-item">
-                    <span className="nav-link" style={{cursor: 'pointer', color: '#ffffff'}} onClick={() => signOut(() => {history.push('/')})}>
-                        SIGN OUT
-                    </span>
+                <li className="nav-item dropdown ml-auto">
+                    <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown"  role="button"
+                          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                        <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg"
+                             className="rounded-circle"
+                             alt="avatar image" width="30"/> {isAuthenticated().user.name.toUpperCase()}
+                    </a>
+                    <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <Link className="dropdown-item" to="/UserDashBoard">Profile</Link>
+                        <a className="dropdown-item" href="#">Another action</a>
+                        <div className="dropdown-divider"></div>
+                        <span className="dropdown-item" style={{cursor: 'pointer', color: 'red'}} onClick={() => signOut(() => {history.push('/')})}>
+                            Sign Out
+                        </span>
+                    </div>
                 </li>
             )}
         </ul>

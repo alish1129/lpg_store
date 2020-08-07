@@ -20,22 +20,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3854fe6-9994-4688-a064-2d70341109d4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/auth/privateRoute.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/user/UserDashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/user/UserDashboard.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Route.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/core/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/core/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/auth/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/auth/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/core/Menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/core/Menu.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/core/css/menu.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/core/css/menu.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/user/SignIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/user/SignIn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/user/SignUp&amp;SignIn.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/user/SignUp&amp;SignIn.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/user/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/user/SignUp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/user/UserDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/user/UserDashboard.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -53,7 +57,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/src/user" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -62,6 +67,14 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/backend/node_modules/typescript/lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/src/resources/images" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/src/user" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -78,7 +91,7 @@
       <workItem from="1594783933532" duration="7341000" />
       <workItem from="1595007136125" duration="11771000" />
       <workItem from="1595049566391" duration="4218000" />
-      <workItem from="1595113659508" duration="41209000" />
+      <workItem from="1595113659508" duration="74425000" />
     </task>
     <servers />
   </component>
@@ -122,9 +135,9 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state width="1259" height="212" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1595224171871" />
-    <state x="241" y="17" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1595821457626">
+    <state x="241" y="17" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1596036200141">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="241" y="17" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1280.800@0.0.1280.800" timestamp="1595821457626" />
+    <state x="241" y="17" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1280.800@0.0.1280.800" timestamp="1596036200141" />
   </component>
 </project>

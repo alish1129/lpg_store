@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import Menu from "../core/Menu";
-import {signinData, authenticate} from "../auth";
+import {signinData, authenticate, isAuthenticated} from "../auth";
 import {Link, Redirect} from "react-router-dom";
 
 import './SignUp&SignIn.scss';
@@ -16,6 +16,7 @@ const SignIn = () => {
     });
 
     const {email, password, loading, error, redirectToReferrer} = values;
+    const {user} = isAuthenticated();
 
     const handleChange = name => event => {
         setValues({...values, error: false, [name]: event.target.value });
@@ -55,7 +56,14 @@ const SignIn = () => {
     const redirectUser = () => {
         if(redirectToReferrer)
         {
-            return <Redirect to="/" />
+            if(user && user.role === 1)
+            {
+                return <Redirect to="/AdminDashBoard" />
+            }
+            else
+            {
+                return <Redirect to="/UserDashBoard" />
+            }
         }
     }
 
@@ -75,8 +83,7 @@ const SignIn = () => {
                                 products ordered and delivered ahead of others.
                             </div>
                             <form>
-                                <input className="input" type="email" name="email" value={email} onChange={handleChange('email')} placeholder="Email Address"/><i
-                                className="fa fa-user"></i>
+                                <input className="input" type="email" name="email" value={email} onChange={handleChange('email')} placeholder="Email Address"/>
                                 <input className="input" type="password" name="password" value={password} onChange={handleChange('password')} placeholder="Password"/>
                                 <label>
                                     {/*<input className="input" type="checkbox"/>I agree to
