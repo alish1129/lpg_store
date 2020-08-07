@@ -1,18 +1,15 @@
-import React, {Fragment} from "react";
-import {Link, withRouter} from "react-router-dom";
-import {signOut, isAuthenticated} from "../auth";
+import React, { Fragment } from 'react';
+import { Link, withRouter } from 'react-router-dom';
+import { signOut, isAuthenticated } from '../auth';
 import './css/menu.scss';
 import logo from '../resources/images/gas.png';
 
-const isActive = (history,path) => {
-    if(history.location.pathname === path)
-    {
-        return {color : "#ffffff", backgroundColor: '#7d3cd3' };
-    }
-    else
-    {
-        return {color: "#ffffff"};
-    }
+const isActive = (history, path) => {
+	if (history.location.pathname === path) {
+		return { color: '#ffffff', backgroundColor: '#7d3cd3' };
+	} else {
+		return { color: '#ffffff' };
+	}
 };
 
 const returnStyleForTitle = (history,path) => {
@@ -44,15 +41,12 @@ const returnStyleForTitle = (history,path) => {
 }
 
 const test = () => {
-    if(isAuthenticated())
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
-}
+	if (isAuthenticated()) {
+		return true;
+	} else {
+		return false;
+	}
+};
 
 const Menu = ({history}) => (
     <div className="navbarMenu">
