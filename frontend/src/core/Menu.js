@@ -78,7 +78,7 @@ const Menu = ({history}) => (
                     </a>
                     <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                         <Link className="dropdown-item" to="/UserDashBoard">Profile</Link>
-                        <a className="dropdown-item" href="#">Another action</a>
+                        <Link className="dropdown-item" to="/Cart">My Cart</Link>
                         <div className="dropdown-divider"></div>
                         <span className="dropdown-item" style={{cursor: 'pointer', color: 'red'}} onClick={() => signOut(() => {history.push('/')})}>
                             Sign Out

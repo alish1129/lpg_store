@@ -20,13 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3854fe6-9994-4688-a064-2d70341109d4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/user/UserDashboard.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/auth/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/auth/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/core/Menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/core/Menu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/core/css/menu.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/core/css/menu.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/user/SignIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/user/SignIn.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/user/UserDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/user/UserDashboard.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -119,22 +116,22 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="378" y="154" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.800@0.0.1280.800" timestamp="1595190767078" />
-    <state width="1259" height="212" key="GridCell.Tab.0.bottom" timestamp="1595224171872">
+    <state width="1259" height="212" key="GridCell.Tab.0.bottom" timestamp="1596773577579">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1259" height="212" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1595224171872" />
-    <state width="1259" height="212" key="GridCell.Tab.0.center" timestamp="1595224171869">
+    <state width="1259" height="212" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1596773577579" />
+    <state width="1259" height="212" key="GridCell.Tab.0.center" timestamp="1596773577577">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1259" height="212" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1595224171869" />
-    <state width="1259" height="212" key="GridCell.Tab.0.left" timestamp="1595224171867">
+    <state width="1259" height="212" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1596773577577" />
+    <state width="1259" height="212" key="GridCell.Tab.0.left" timestamp="1596773577576">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1259" height="212" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1595224171867" />
-    <state width="1259" height="212" key="GridCell.Tab.0.right" timestamp="1595224171871">
+    <state width="1259" height="212" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1596773577576" />
+    <state width="1259" height="212" key="GridCell.Tab.0.right" timestamp="1596773577578">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1259" height="212" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1595224171871" />
+    <state width="1259" height="212" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1596773577578" />
     <state x="241" y="17" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1596036200141">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
