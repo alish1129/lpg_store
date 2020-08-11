@@ -40,22 +40,45 @@ const returnStyleForTitle = (history,path) => {
 
 }
 
-const test = () => {
-	if (isAuthenticated()) {
-		return true;
-	} else {
-		return false;
-	}
+const adminNavBarStyle = () => {
+    if(isAuthenticated()){
+        if(isAuthenticated().user.role === 1)
+        {
+            return {
+                backgroundColor: 'white', marginLeft: '18%', width: '82%', boxShadow: '0 .15rem 1.75rem 0 rgba(58,59,69,.15)'
+            };
+        }
+    }
 };
+
+const showTitle = () => {
+    if(isAuthenticated())
+    {
+        if(isAuthenticated().user.role === 0)
+        {
+            return true;
+        }
+        else if(isAuthenticated().user.role === 1)
+        {
+            return false;
+        }
+    }
+    else
+    {
+        return true;
+    }
+}
 
 const Menu = ({history}) => (
     <div className="navbarMenu">
-        <ul className="nav nav-pills fixed-top">
-            <li className={`nav-item ${isAuthenticated()? '' : 'mr-auto'}`}>
-                <Link className="nav-link" style={returnStyleForTitle(history,'/')} to="/">
-                    <img style={{margin: '-5px 0px 0px -5px'}} src={logo} width="30"
-                         className="" alt=""/> SURYA SOLUTION
-                </Link>
+        <ul className="nav nav-pills fixed-top" style={adminNavBarStyle()}>
+            <li className={`nav-item ${isAuthenticated() ? '' : 'mr-auto'}`}>
+                {showTitle()  && (
+                    <Link className="nav-link" style={returnStyleForTitle(history,'/')} to="/">
+                        <img style={{margin: '-5px 0px 0px -5px'}} src={logo} width="30"
+                             className="" alt=""/> SURYA SOLUTION
+                    </Link>
+                )}
             </li>
 
             {!isAuthenticated() && (
@@ -77,9 +100,13 @@ const Menu = ({history}) => (
                              alt="avatar image" width="30"/> {isAuthenticated().user.name.toUpperCase()}
                     </a>
                     <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <Link className="dropdown-item" to="/UserDashBoard">Profile</Link>
-                        <Link className="dropdown-item" to="/Cart">My Cart</Link>
-                        <div className="dropdown-divider"></div>
+                        {isAuthenticated().user.role === 0 && (
+                            <Fragment>
+                            <Link className="dropdown-item" to="/UserDashBoard">Profile</Link>
+                            <Link className="dropdown-item" to="/Cart">My Cart</Link>
+                            <div className="dropdown-divider"></div>
+                            </Fragment>
+                        )}
                         <span className="dropdown-item" style={{cursor: 'pointer', color: 'red'}} onClick={() => signOut(() => {history.push('/')})}>
                             Sign Out
                         </span>

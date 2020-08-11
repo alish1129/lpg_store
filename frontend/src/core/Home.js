@@ -7,6 +7,7 @@ import { getAllProducts } from '../actions/products';
 const Home = (props) => {
 	useEffect(() => {
 		props.getAllProducts('price', 'desc', 50);
+		console.log(props);
 	}, []);
 
 	const showList = () => {

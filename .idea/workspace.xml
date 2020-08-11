@@ -20,11 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3854fe6-9994-4688-a064-2d70341109d4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/src/admin/AdminDashboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/auth/adminRoute.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/core/AdminMenu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/core/css/adminMenu.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Route.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/core/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/core/Home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/core/Menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/core/Menu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/user/UserDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/user/UserDashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/core/css/menu.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/core/css/menu.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/user/SignIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/user/SignIn.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,10 +113,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="384" y="209" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1593279219006">
+    <state x="384" y="209" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1596907356199">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="384" y="209" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.800@0.0.1280.800" timestamp="1593279219006" />
+    <state x="384" y="209" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.800@0.0.1280.800" timestamp="1596907356199" />
     <state x="378" y="154" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1595190767078">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
@@ -136,5 +141,9 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="241" y="17" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1280.800@0.0.1280.800" timestamp="1596036200141" />
+    <state x="341" y="32" width="598" height="735" key="find.popup" timestamp="1597005683683">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="341" y="32" width="598" height="735" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1597005683683" />
   </component>
 </project>
