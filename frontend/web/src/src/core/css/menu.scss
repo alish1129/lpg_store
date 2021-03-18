@@ -1,0 +1,34 @@
+.navbarMenu {
+  //margin-bottom: 5%;
+}
+.nav{
+  &-pills {
+    //background: rgba(212, 39, 39, 0.9);
+    //top: 1.5%;
+    //left: 3%;
+    width: 100%;
+    padding: 10px 30px;
+    //background-color: #111111;
+
+    .show>.nav-link{
+      background-color: mediumpurple;
+      color: white !important;
+    }
+  }
+  #navbarDropdown{
+    color: whitesmoke;
+    &:active{
+      background-color: mediumpurple !important;
+      color: white !important;
+    }
+    &:hover {
+      background-color: mediumpurple;
+      box-shadow: 6px 8px 12px 0px rgba(92,44,44,0.95);
+      color: white !important;
+    }
+  }
+  .nav-pills .nav-link.active{
+    color: green;
+  }
+
+}

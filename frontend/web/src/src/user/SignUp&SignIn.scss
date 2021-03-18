@@ -1,0 +1,223 @@
+$color_accent1: #7d3cd3;
+$color_accent4: #d42727;
+$color_accent2: #5921bd;
+$color_accent3: #251873;
+$color_light_text: #b0bec5;
+
+html {
+  font-family: 'Source Sans Pro', sans-serif;
+  line-height: 1.2em;
+}
+.animate {
+  transition: all .4s cubic-bezier(.4,0,.2,1);
+}
+.sign_in{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  //background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/d1/Mount_Everest_as_seen_from_Drukair2_PLW_edit.jpg);
+  background-size: cover;
+  background-position: center;
+  .promo {
+    position: absolute;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    //max-width: calc(100% - 300px);
+    padding: 0 100px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7d3cd3+0,5921bd+100 */
+    background: transparentize($color_accent4, .1); /* Old browsers */
+    background: -moz-linear-gradient(top,  transparentize($color_accent4, .1) 0%, transparentize($color_accent3, .1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  transparentize($color_accent4, .1) 0%,transparentize($color_accent3, .1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  transparentize($color_accent4, .1) 0%,transparentize($color_accent3, .1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='transparentize($color_accent4, .1)', endColorstr='transparentize($color_accent3, .1)',GradientType=0 ); /* IE6-9 */
+    .title {
+      font-size: 4rem;
+      font-weight: 100;
+      color: #fff;
+      text-transform: capitalize;
+    }
+    .subtitle {
+      color: transparentize(#fff, .5);
+      font-size: 1rem;
+      line-height: 1.5rem;
+      margin: 20px 0;
+      font-weight: 100;
+    }
+    .buttons {
+      width: 100%;
+      button {
+        float: left;
+        margin-right: 10px;
+      }
+    }
+  }
+  .form_container {
+    height: 80%;
+    top: 10%;
+    right: 5%;
+    -webkit-box-shadow: 1px 1px 55px 4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 55px 4px rgba(0,0,0,0.75);
+    box-shadow: 1px 1px 55px 4px rgba(0,0,0,0.75);
+    position: absolute;
+    box-sizing: border-box;
+    //top: 0;
+    //right: 0;
+    bottom: 0;
+    width: 36vw;
+    min-width: 300px;
+    background-color: #fff;
+    padding: 50px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    .heading {
+      text-align: center;
+      color: $color_accent1;
+      font-size: 2.3rem;
+      line-height: 1.3em;
+      text-transform: capitalize;
+    }
+    .description {
+      text-align: center;
+      color: $color_light_text;
+      font-size: .85rem;
+      line-height: 1.3em;
+      margin: 10px 0 30px;
+    }
+    label {
+      color: $color_light_text;
+      font-size: .7;
+    }
+    .copyright {
+      position: absolute;
+      color: $color_light_text;
+      left: 0;
+      right: 0;
+      bottom: 20px;
+      text-align: center;
+      font-size: .7rem;
+    }
+  }
+}
+.register{
+  background-image: url('../resources/images/HPG-U-75.jpg');
+}
+.login{
+  background-image: url('../resources/images/lpg delivery.jpg');
+
+  .title{
+    font-size: 3.5rem !important;
+  }
+}
+.btn {
+  display: block;
+  box-sizing: border-box;
+  min-width: 200px;
+  padding: 0 2em;
+  text-align: center;
+  line-height: 40px;
+  height: 44px;
+  background-color: #fff;
+  border: 0;
+  text-transform: capitalize;
+  cursor: pointer;
+  color: $color_accent2;
+  font-weight: 500;
+  border-radius: 3px;
+  &_outline {
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid #fff;
+    &:hover {
+      color: $color_accent1;
+      background-color: #fff;
+    }
+  }
+  &_outline1 {
+    &:hover {
+      background-color: transparent;
+      border: 2px solid #fff;
+      color: #fff;
+    }
+  }
+  &_accent {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7d3cd3+0,5921bd+100 */
+    background: #7d3cd3; /* Old browsers */
+    background: -moz-linear-gradient(top,  #7d3cd3 0%, #5921bd 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #7d3cd3 0%,#5921bd 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #7d3cd3 0%,#5921bd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d3cd3', endColorstr='#5921bd',GradientType=0 ); /* IE6-9 */
+    color: #fff;
+    &:hover {
+      border: 2px solid $color_accent1;
+      background: transparent;
+      color: $color_accent1;
+    }
+  }
+
+}
+
+input:not([type="checkbox"]) {
+  @extend .animate;
+  border: 0;
+  border-bottom: 1px solid $color_light_text;
+  line-height: 40px;
+  padding: 0 20px;
+  margin-top: 20px;
+  outline: 0;
+  width: 100%;
+  box-sizing: border-box;
+  &:focus {
+    border-color: $color_accent1;
+  }
+}
+input[type="checkbox"] {
+  margin: 20px 10px 20px 0;
+}
+
+.form_shake {
+  animation: shake 0.6s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  //backface-visibility: hidden;
+  //perspective: 1000px;
+}
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-2px, 0, 0);
+    background-color: #ffeded;
+  }
+
+  20%, 80% {
+    transform: translate3d(3px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-6px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(6px, 0, 0);
+  }
+}
+
+.blinking{
+  animation:blinkingText 1.8s 10;
+}
+@keyframes blinkingText{
+  0%{		color: red;	}
+  49%{	color: orange;	}
+  50%{	color: red;	}
+  99%{	color: orange;	}
+  100%{	color: red;	}
+}

@@ -26,6 +26,7 @@ const uniqueMessage = (error: any) => {
 const errorHandler = (error: any) => {
 	let message = '';
 
+    return error;
 	if (error.code) {
 		switch (error.code) {
 			case 11000:

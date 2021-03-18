@@ -12,6 +12,7 @@ import { inventoriesRouter } from './routes/inventories';
 import { categoryRouter } from './routes/category';
 import { userRouter } from './routes/user';
 import { productRouter } from './routes/product';
+import { brainTreeRouter } from './routes/braintree';
 
 dotenv.config();
 
@@ -44,6 +45,7 @@ app.use('/api', inventoriesRouter);
 app.use('/api', categoryRouter);
 app.use('/api', userRouter);
 app.use('/api', productRouter);
+app.use('/api', brainTreeRouter);
 
 const PORT = process.env.PORT || 5000;
 

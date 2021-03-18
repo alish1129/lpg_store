@@ -1,0 +1,142 @@
+$color_accent1: #7d3cd3;
+$color_accent4: #d42727;
+$color_accent2: #5921bd;
+$color_accent3: #251873;
+
+.dashboard
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-image: url('../resources/images/LPG-ship-705x470.jpg');
+    //background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/d1/Mount_Everest_as_seen_from_Drukair2_PLW_edit.jpg);
+    background-size: cover;
+    background-position: center;
+
+    .promo
+    {
+        position: absolute;
+        box-sizing: border-box;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        //max-width: calc(100% - 300px);
+        //padding: 0 0;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7d3cd3+0,5921bd+100 */
+        background: transparentize($color_accent4, .1); /* Old browsers */
+        background: -moz-linear-gradient(top, transparentize($color_accent4, .1) 0%, transparentize($color_accent3, .1) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, transparentize($color_accent4, .1) 0%, transparentize($color_accent3, .1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, transparentize($color_accent4, .1) 0%, transparentize($color_accent3, .1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='transparentize($color_accent4, .1)', endColorstr='transparentize($color_accent3, .1)', GradientType=0); /* IE6-9 */
+    }
+}
+
+.profile-card-5 {
+    height: 75%;
+    top: 18%;
+    left: 7%;
+    -webkit-box-shadow: 1px 1px 55px 4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 55px 4px rgba(0,0,0,0.75);
+    box-shadow: 1px 1px 55px 4px rgba(0,0,0,0.75);
+    position: absolute;
+    box-sizing: border-box;
+    bottom: 10%;
+    width: 30vw;
+    min-width: 200px;
+    background-color: #fff;
+    //padding: 50px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/*.profile-card-5 .btn{
+    border-radius:2px;
+    text-transform:uppercase;
+    font-size:12px;
+    padding:7px 20px;
+}*/
+.profile-card-5 .card-img-block {
+    width: 91%;
+    margin: 0 auto;
+    position: relative;
+    top: -20px;
+}
+
+.purchase-card
+{
+    height: 41.5%;
+    top: 18%;
+    right: 7%;
+    -webkit-box-shadow: 1px 1px 55px 4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 55px 4px rgba(0,0,0,0.75);
+    box-shadow: 1px 1px 55px 4px rgba(0,0,0,0.75);
+    position: absolute;
+    box-sizing: border-box;
+    bottom: 0%;
+    width: 50vw;
+    min-width: 200px;
+    background-color: #fff;
+    //padding: 50px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+.profile-card-5 .card-img-block img{
+    border-radius:5px;
+    box-shadow:0 0 10px rgba(0,0,0,0.63);
+    cursor: pointer;
+}
+.profile-card-5 h5{
+    color:#4E5E30;
+    font-weight:600;
+}
+.profile-card-5 p{
+    font-size:14px;
+    font-weight:300;
+}
+.profile-card-5 .btn-primary{
+    background-color:#4E5E30;
+    border-color:#4E5E30;
+}
+
+.butn {
+    display: block;
+    box-sizing: border-box;
+    padding: 0 2em;
+    text-align: center;
+    line-height: 40px;
+    height: 44px;
+    background-color: #fff;
+    border: 0;
+    text-transform: capitalize;
+    cursor: pointer;
+    color: $color_accent2;
+    font-weight: 500;
+    border-radius: 3px;
+    &_accent {
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7d3cd3+0,5921bd+100 */
+        background: #7d3cd3; /* Old browsers */
+        background: -moz-linear-gradient(top,  #7d3cd3 0%, #5921bd 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  #7d3cd3 0%,#5921bd 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom,  #7d3cd3 0%,#5921bd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d3cd3', endColorstr='#5921bd',GradientType=0 ); /* IE6-9 */
+        color: #fff;
+        &:hover {
+            border: 2px solid $color_accent1;
+            background: transparent;
+            color: $color_accent1;
+        }
+    }
+
+}
